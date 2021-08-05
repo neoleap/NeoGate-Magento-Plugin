@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <ipay>
+                <model>Alrajhi\iPay\Model\iPay</model>
+                <title>Al Rajhi Bank Payment Gateway</title>
+                <service_provider>ipay_paisa</service_provider>
+                <production_url>https://secure.ipay.in/_payment</production_url>
+                <sandbox_url>https://test.ipay.in/_payment</sandbox_url>
+                <environment>sandbox</environment>
+                <account_type>ipay</account_type>
+                <redirect_url>ipay/standard/redirect</redirect_url>
+                <return_url>ipay/standard/response</return_url>
+                <cancel_url>ipay/standard/cancel</cancel_url>
+                <merchant_key backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <salt backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+            </ipay>
+        </payment>
+    </default>
+</config>
